@@ -20,7 +20,7 @@ import numpy as np
 from .colors import label_color
 
 
-def draw_box(image, box, color, thickness=2):
+def draw_box(image, box, color, thickness=4):
     """ Draws a box on an image with a given color.
 
     # Arguments
@@ -42,8 +42,8 @@ def draw_caption(image, box, caption):
         caption : String containing the text to draw.
     """
     b = np.array(box).astype(int)
-    cv2.putText(image, caption, (b[0], b[1] - 10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
-    cv2.putText(image, caption, (b[0], b[1] - 10), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1)
+    cv2.putText(image, caption, (b[0], b[1] - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 0, 0), 3, cv2.LINE_AA)
+    cv2.putText(image, caption, (b[0], b[1] - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (255, 255, 255), 3, cv2.LINE_AA)
 
 
 def draw_boxes(image, boxes, color, thickness=2):
