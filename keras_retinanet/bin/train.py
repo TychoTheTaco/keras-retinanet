@@ -216,7 +216,7 @@ def create_callbacks(model, training_model, prediction_model, validation_generat
     return callbacks
 
 
-def create_generators(args, preprocess_image):
+def create_generators(args, preprocess_image, base_dir=None):
     """ Create generators for training and validation.
 
     Args
@@ -297,6 +297,7 @@ def create_generators(args, preprocess_image):
             args.classes,
             transform_generator=transform_generator,
             visual_effect_generator=visual_effect_generator,
+            base_dir=base_dir,
             **common_args
         )
 
@@ -475,7 +476,7 @@ def main(args=None):
         args.config = read_config_file(args.config)
 
     # create the generators
-    train_generator, validation_generator = create_generators(args, backbone.preprocess_image)
+    train_generator, validation_generator = create_generators(args, backbone.preprocess_image, base_dir='')
 
     # create the model
     if args.snapshot is not None:
