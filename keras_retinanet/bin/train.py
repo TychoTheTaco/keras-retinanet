@@ -455,6 +455,8 @@ def parse_args(args):
 
 
 def main(args=None):
+    print('main...')
+
     # parse arguments
     if args is None:
         args = sys.argv[1:]
