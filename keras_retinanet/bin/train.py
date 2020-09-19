@@ -455,7 +455,7 @@ def parse_args(args):
 
 
 def main(args=None):
-    print('main...')
+    print('CALLED MAIN WITH ARGS:', args)
 
     # parse arguments
     if args is None:
