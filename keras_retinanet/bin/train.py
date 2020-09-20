@@ -480,7 +480,7 @@ def main(args=None):
         args.config = read_config_file(args.config)
 
     # create the generators
-    train_generator, validation_generator = create_generators(args, backbone.preprocess_image, base_dir='s3://sentry-dataset/')
+    train_generator, validation_generator = create_generators(args, backbone.preprocess_image, base_dir='/opt/ml/input/data/dataset')
 
     # create the model
     if args.snapshot is not None:
