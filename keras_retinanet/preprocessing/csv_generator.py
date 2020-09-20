@@ -73,6 +73,7 @@ def _read_annotations(csv_reader, classes):
 
             import pathlib
             img_file = str(pathlib.Path(img_file))
+            print('IMAGE FILE:', img_file, str(img_file))
         except ValueError:
             raise_from(ValueError('line {}: format should be \'img_file,x1,y1,x2,y2,class_name\' or \'img_file,,,,,\''.format(line)), None)
 
