@@ -459,6 +459,8 @@ def main(args=None):
     sys.stdout.write('THIS IS STDOUT')
     sys.stderr.write('THIS IS STDERR')
 
+    args.snapshot_path = '/opt/ml/model'
+
     # parse arguments
     if args is None:
         args = sys.argv[1:]
