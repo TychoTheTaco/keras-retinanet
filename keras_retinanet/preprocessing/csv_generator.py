@@ -73,7 +73,7 @@ def _read_annotations(csv_reader, classes):
 
             import pathlib
             img_file = str(pathlib.Path(img_file).as_posix()).replace('\\', '/')
-            print('IMAGE FILE:', img_file)
+            #print('IMAGE FILE:', img_file)
         except ValueError:
             raise_from(ValueError('line {}: format should be \'img_file,x1,y1,x2,y2,class_name\' or \'img_file,,,,,\''.format(line)), None)
 
@@ -197,9 +197,9 @@ class CSVGenerator(Generator):
     def image_path(self, image_index):
         """ Returns the image path for image_index.
         """
+        print('BASE DIR:', self.base_dir, 'IMG_PATH:', self.image_names[image_index])
         p = os.path.join(self.base_dir, self.image_names[image_index])
-        pa = os.path.abspath(p)
-        print(os.path.exists(p), p, '\n', os.path.exists(pa), pa)
+        print(os.path.exists(p), p)
         return p
 
     def image_aspect_ratio(self, image_index):
