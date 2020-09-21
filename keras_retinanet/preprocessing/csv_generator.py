@@ -197,9 +197,9 @@ class CSVGenerator(Generator):
     def image_path(self, image_index):
         """ Returns the image path for image_index.
         """
-        print('BASE DIR:', self.base_dir, 'IMG_PATH:', self.image_names[image_index])
+        #print('BASE DIR:', self.base_dir, 'IMG_PATH:', self.image_names[image_index])
         p = os.path.join(self.base_dir, self.image_names[image_index])
-        print(os.path.exists(p), p)
+        #print(os.path.exists(p), p)
         return p
 
     def image_aspect_ratio(self, image_index):
