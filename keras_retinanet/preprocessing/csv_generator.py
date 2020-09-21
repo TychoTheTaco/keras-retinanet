@@ -72,7 +72,7 @@ def _read_annotations(csv_reader, classes):
             img_file, x1, y1, x2, y2, class_name = row[:6]
 
             import pathlib
-            img_file = str(pathlib.Path(img_file).as_posix())
+            img_file = str(pathlib.Path(img_file).as_posix()).replace('\\\\', '/')
             for x in os.listdir('/opt/ml/input/data/dataset/VisDrone2019-DET-train/images'):
                 print(x)
         except ValueError:
