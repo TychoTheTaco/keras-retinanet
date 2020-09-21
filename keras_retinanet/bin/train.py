@@ -306,6 +306,7 @@ def create_generators(args, preprocess_image, base_dir=None):
                 args.val_annotations,
                 args.classes,
                 shuffle_groups=False,
+                base_dir=base_dir,
                 **common_args
             )
         else:
