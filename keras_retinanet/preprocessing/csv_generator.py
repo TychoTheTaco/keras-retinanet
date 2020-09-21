@@ -72,10 +72,8 @@ def _read_annotations(csv_reader, classes):
             img_file, x1, y1, x2, y2, class_name = row[:6]
 
             import pathlib
-            img_file = str(pathlib.Path(img_file).as_posix()).replace('\\\\', '/')
+            img_file = str(pathlib.Path(img_file).as_posix()).replace('\\', '/')
             print('IMAGE FILE:', img_file)
-            #for x in os.listdir('/opt/ml/input/data/dataset/VisDrone2019-DET-train/images'):
-            #    print(x)
         except ValueError:
             raise_from(ValueError('line {}: format should be \'img_file,x1,y1,x2,y2,class_name\' or \'img_file,,,,,\''.format(line)), None)
 
