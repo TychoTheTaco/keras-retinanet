@@ -457,8 +457,6 @@ def parse_args(args):
 
 def main(args=None):
     print('CALLED MAIN WITH ARGS:', args)
-    sys.stdout.write('THIS IS STDOUT')
-    sys.stderr.write('THIS IS STDERR')
 
     # parse arguments
     if args is None:
