@@ -457,13 +457,13 @@ def parse_args(args):
 
 
 def main(args=None):
-    print('CALLED MAIN WITH ARGS:', args)
 
     # parse arguments
     if args is None:
         args = sys.argv[1:]
     args = parse_args(args)
 
+    # Required for Amazon SageMaker docker container
     args.snapshot_path = '/opt/ml/model'
 
     # create object that stores backbone information
@@ -540,7 +540,7 @@ def main(args=None):
         generator=train_generator,
         steps_per_epoch=args.steps,
         epochs=args.epochs,
-        verbose=1,
+        verbose=2,
         callbacks=callbacks,
         workers=args.workers,
         use_multiprocessing=args.multiprocessing,
