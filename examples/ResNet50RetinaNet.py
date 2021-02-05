@@ -45,7 +45,7 @@ model_path = os.path.join('..', 'snapshots', 'resnet50_coco_best_v2.1.0.h5')
 # load retinanet model
 model = models.load_model(model_path, backbone_name='resnet50')
 
-# if the model is not converted to an inference model, use the line below
+# if the model is not converted to an samples model, use the line below
 # see: https://github.com/fizyr/keras-retinanet#converting-a-training-model-to-inference-model
 # model = models.convert_model(model)
 

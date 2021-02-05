@@ -88,7 +88,7 @@ def load_model(filepath, backbone_name='resnet50'):
 
 
 def convert_model(model, nms=True, class_specific_filter=True, anchor_params=None, **kwargs):
-    """ Converts a training model to an inference model.
+    """ Converts a training model to an samples model.
 
     Args
         model                 : A retinanet training model.

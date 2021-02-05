@@ -35,7 +35,7 @@ from ..utils.tf_version import check_tf_version
 
 
 def parse_args(args):
-    parser = argparse.ArgumentParser(description='Script for converting a training model to an inference model.')
+    parser = argparse.ArgumentParser(description='Script for converting a training model to an samples model.')
 
     parser.add_argument('model_in', help='The model to convert.')
     parser.add_argument('model_out', help='Path to save the converted model to.')

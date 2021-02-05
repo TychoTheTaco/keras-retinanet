@@ -40,10 +40,10 @@ The training procedure of `keras-retinanet` works with *training models*. These 
 
 ```shell
 # Running directly from the repository:
-keras_retinanet/bin/convert_model.py /path/to/training/model.h5 /path/to/save/inference/model.h5
+keras_retinanet/bin/convert_model.py /path/to/training/model.h5 /path/to/save/samples/model.h5
 
 # Using the installed script:
-retinanet-convert-model /path/to/training/model.h5 /path/to/save/inference/model.h5
+retinanet-convert-model /path/to/training/model.h5 /path/to/save/samples/model.h5
 ```
 
 Most scripts (like `retinanet-evaluate`) also support converting on the fly, using the `--convert-model` argument.
